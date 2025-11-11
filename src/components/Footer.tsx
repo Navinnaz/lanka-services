@@ -1,5 +1,3 @@
-import { Wrench } from "lucide-react";
-
 const Footer = () => {
   return (
     <footer className="bg-dark-bg border-t border-dark-secondary py-12">
@@ -7,7 +5,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Wrench className="w-6 h-6 text-primary" />
+              {/* <Wrench className="w-6 h-6 text-primary" /> */}
               <h3 className="text-xl font-bold text-light-bg">Lanka Services</h3>
             </div>
             <p className="text-light-bg/70">

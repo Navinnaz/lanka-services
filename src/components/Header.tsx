@@ -6,7 +6,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Wrench className="w-8 h-8 text-primary" />
+            {/* <Wrench className="w-8 h-8 text-primary" /> */}
             <h1 className="text-2xl font-bold text-light-bg">Lanka Services</h1>
           </div>
           <nav className="hidden md:flex gap-6">
