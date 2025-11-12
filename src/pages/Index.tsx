@@ -6,6 +6,7 @@ import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
 import Subscribe from "@/components/Subscribe";
 import Footer from "@/components/Footer";
+import BeforeAfter from "@/components/BeforeAfter";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <Header />
       <Hero />
       <About />
+      <BeforeAfter />
       <Gallery />
       <Reviews />
       <Contact />
