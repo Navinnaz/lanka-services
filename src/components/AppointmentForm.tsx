@@ -36,49 +36,55 @@ const AppointmentForm = () => {
 
   return (
     <form
-      onSubmit={handleSubmit}
-      name="appointment"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      className="space-y-4"
-    >
-      <input type="hidden" name="form-name" value="appointment" />
-      <p className="hidden">
-        <label>
-          Don’t fill this out if you're human: <input name="bot-field" />
-        </label>
-      </p>
+        name="appointment"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        className="space-y-4"
+      >
+        {/* Hidden fields for Netlify */}
+        <input type="hidden" name="form-name" value="appointment" />
+        <p className="hidden">
+          <label>
+            Don’t fill this out if you're human: <input name="bot-field" />
+          </label>
+        </p>
 
-      <div>
-        <Label htmlFor="name">Nom complet</Label>
-        <Input id="name" name="name" required />
-      </div>
+        <div>
+          <Label htmlFor="name">Nom complet</Label>
+          <Input id="name" name="name" required />
+        </div>
 
-      <div>
-        <Label htmlFor="email">Email</Label>
-        <Input id="email" name="email" type="email" required />
-      </div>
+        <div>
+          <Label htmlFor="email">Email</Label>
+          <Input id="email" name="email" type="email" required />
+        </div>
 
-      <div>
-        <Label htmlFor="phone">Téléphone</Label>
-        <Input id="phone" name="phone" type="tel" required />
-      </div>
+        <div>
+          <Label htmlFor="phone">Téléphone</Label>
+          <Input id="phone" name="phone" type="tel" required />
+        </div>
 
-      <div>
-        <Label htmlFor="vehicle">Véhicule (Marque & Modèle)</Label>
-        <Input id="vehicle" name="vehicle" placeholder="ex: Peugeot 308" required />
-      </div>
+        <div>
+          <Label htmlFor="vehicle">Véhicule (Marque & Modèle)</Label>
+          <Input id="vehicle" name="vehicle" placeholder="ex: Peugeot 308" required />
+        </div>
 
-      <div>
-        <Label htmlFor="message">Message</Label>
-        <Textarea id="message" name="message" placeholder="Décrivez le problème..." required />
-      </div>
+        <div>
+          <Label htmlFor="message">Message</Label>
+          <Textarea
+            id="message"
+            name="message"
+            placeholder="Décrivez le problème de votre véhicule..."
+            required
+          />
+        </div>
 
-      <Button type="submit" className="w-full">
-        Envoyer la demande
-      </Button>
-    </form>
+        <Button type="submit" className="w-full">
+          Envoyer la demande
+        </Button>
+      </form>
+
 
   );
 };
