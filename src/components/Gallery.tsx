@@ -4,17 +4,17 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Placeholder images - in production, these would be actual garage photos
 const videos = [
-  { id: 1, src: "/videos/lankaservices-vid1.mp4", alt: "Not supported on your broswer" },
-  { id: 2, src: "/videos/lankaservices-vid7.mp4", alt: "Not supported on your broswer" },
-  { id: 3, src: "/videos/lankaservices-vid2.mp4", alt: "Not supported on your broswer" },
-  { id: 4, src: "/videos/lankaservices-vid3.mp4", alt: "Not supported on your broswer" },
-  { id: 5, src: "/videos/lankaservices-vid4.mp4", alt: "Not supported on your broswer" },
-  { id: 6, src: "/videos/lankaservices-vid5.mp4", alt: "Not supported on your browser" },
-  { id: 7, src: "/videos/lankaservices-vid6.mp4", alt: "Not supported on your browser" },
-  { id: 8, src: "/videos/lankaservices-vid8.mp4", alt: "Not supported on your browser" },
-  { id: 9, src: "/videos/lankaservices-vid9.mp4", alt: "Not supported on your browser" },
-  { id: 10, src: "/videos/lankaservices-vid10.mp4", alt: "Not supported on your browser" },
-  { id: 11, src: "/videos/lankaservices-vid11.mp4", alt: "Not supported on your browser" },
+  { id: 1, src: "/videos/lankaservices-vid1.mp4", alt: "" },
+  { id: 2, src: "/videos/lankaservices-vid7.mp4", alt: "" },
+  { id: 3, src: "/videos/lankaservices-vid2.mp4", alt: "" },
+  { id: 4, src: "/videos/lankaservices-vid3.mp4", alt: "" },
+  { id: 5, src: "/videos/lankaservices-vid4.mp4", alt: "" },
+  { id: 6, src: "/videos/lankaservices-vid5.mp4", alt: "" },
+  { id: 7, src: "/videos/lankaservices-vid6.mp4", alt: "" },
+  { id: 8, src: "/videos/lankaservices-vid8.mp4", alt: "" },
+  { id: 9, src: "/videos/lankaservices-vid9.mp4", alt: "" },
+  { id: 10, src: "/videos/lankaservices-vid10.mp4", alt: "" },
+  { id: 11, src: "/videos/lankaservices-vid11.mp4", alt: "" },
 ];
 
   const Gallery = () => {

@@ -35,60 +35,51 @@ const AppointmentForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form
+      onSubmit={handleSubmit}
+      name="appointment"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      className="space-y-4"
+    >
+      <input type="hidden" name="form-name" value="appointment" />
+      <p className="hidden">
+        <label>
+          Don’t fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
+
       <div>
         <Label htmlFor="name">Nom complet</Label>
-        <Input
-          id="name"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          required
-        />
+        <Input id="name" name="name" required />
       </div>
+
       <div>
         <Label htmlFor="email">Email</Label>
-        <Input
-          id="email"
-          type="email"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          required
-        />
+        <Input id="email" name="email" type="email" required />
       </div>
+
       <div>
         <Label htmlFor="phone">Téléphone</Label>
-        <Input
-          id="phone"
-          type="tel"
-          value={formData.phone}
-          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          required
-        />
+        <Input id="phone" name="phone" type="tel" required />
       </div>
+
       <div>
         <Label htmlFor="vehicle">Véhicule (Marque & Modèle)</Label>
-        <Input
-          id="vehicle"
-          value={formData.vehicle}
-          onChange={(e) => setFormData({ ...formData, vehicle: e.target.value })}
-          placeholder="ex: Peugeot 308"
-          required
-        />
+        <Input id="vehicle" name="vehicle" placeholder="ex: Peugeot 308" required />
       </div>
+
       <div>
         <Label htmlFor="message">Message</Label>
-        <Textarea
-          id="message"
-          value={formData.message}
-          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          placeholder="Décrivez le problème de votre véhicule..."
-          required
-        />
+        <Textarea id="message" name="message" placeholder="Décrivez le problème..." required />
       </div>
+
       <Button type="submit" className="w-full">
         Envoyer la demande
       </Button>
     </form>
+
   );
 };
 
