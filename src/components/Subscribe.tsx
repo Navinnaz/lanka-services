@@ -1,20 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
 
 const Subscribe = () => {
-  const { toast } = useToast();
   const [email, setEmail] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Inscription réussie!",
-      description: "Vous recevrez nos offres spéciales et actualités.",
-    });
-    setEmail("");
-  };
 
   return (
     <section className="py-20 bg-background">
@@ -24,22 +13,33 @@ const Subscribe = () => {
             Restez Informé
           </h2>
           <p className="text-muted-foreground mb-8">
-            Inscrivez-vous pour recevoir nos offres spéciales, promotions et événements.
+            Inscrivez-vous pour recevoir nos offres spéciales, promotions et
+            événements.
           </p>
-          
-          <form onSubmit={handleSubmit} className="flex gap-4 max-w-md mx-auto">
+
+          {/* -------------- NETLIFY FORM -------------- */}
+          <form
+            name="newsletter"
+            method="POST"
+            data-netlify="true"
+            className="flex gap-4 max-w-md mx-auto"
+          >
+            {/* Required hidden input for Netlify */}
+            <input type="hidden" name="form-name" value="newsletter" />
+
             <Input
               type="email"
+              name="email"               // IMPORTANT FOR NETLIFY
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Votre adresse email"
               className="flex-1"
               required
             />
-            <Button type="submit">
-              S'inscrire
-            </Button>
+
+            <Button type="submit">S'inscrire</Button>
           </form>
+          {/* ------------------------------------------- */}
         </div>
       </div>
     </section>

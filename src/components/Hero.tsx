@@ -24,9 +24,9 @@ const Hero = () => {
         </p>
         <Dialog>
           <DialogTrigger asChild>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
-              Prendre Rendez-vous
-            </Button>
+            <a href="/appointment">
+                <Button>Prendre un rendez-vous</Button>
+            </a>
           </DialogTrigger>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
