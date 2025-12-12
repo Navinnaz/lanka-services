@@ -21,6 +21,7 @@ const Subscribe = () => {
           <form
             name="newsletter"
             method="POST"
+            action="/"
             data-netlify="true"
             className="flex gap-4 max-w-md mx-auto"
           >
