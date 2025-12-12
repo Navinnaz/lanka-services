@@ -19,14 +19,14 @@ const Subscribe = () => {
 
           {/* -------------- NETLIFY FORM -------------- */}
           <form
-            name="newsletter"
+            name="subscribe"
             method="POST"
             action="/"
             data-netlify="true"
             className="flex gap-4 max-w-md mx-auto"
           >
             {/* Required hidden input for Netlify */}
-            <input type="hidden" name="form-name" value="newsletter" />
+            <input type="hidden" name="form-name" value="subscribe" />
 
             <Input
               type="email"
