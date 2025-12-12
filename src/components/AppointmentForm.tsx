@@ -84,8 +84,6 @@ const AppointmentForm = () => {
           Envoyer la demande
         </Button>
       </form>
-
-
   );
 };
 
