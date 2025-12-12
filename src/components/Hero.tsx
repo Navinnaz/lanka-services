@@ -24,15 +24,13 @@ const Hero = () => {
         </p>
         <Dialog>
           <DialogTrigger asChild>
-            <a href="/appointment">
-                <Button>Prendre un rendez-vous</Button>
-            </a>
+            <Button>Prendre un rendez-vous</Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
               <DialogTitle>Réserver un Rendez-vous</DialogTitle>
             </DialogHeader>
-            <AppointmentForm />
+              <AppointmentForm />
           </DialogContent>
         </Dialog>
       </div>
